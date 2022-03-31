@@ -12,12 +12,16 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    SystemChrome.setSystemUIOverlayStyle(
-        const SystemUiOverlayStyle(statusBarColor: Colorz.white));
+    SystemChrome.setSystemUIOverlayStyle(const SystemUiOverlayStyle(
+      statusBarColor: Colorz.white,
+      // statusBarBrightness: Brightness.dark,
+      // statusBarIconBrightness: Brightness.dark
+    ));
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       title: 'E-Commerce',
       theme: ThemeData(
+        scaffoldBackgroundColor: Colorz.white,
         appBarTheme: const AppBarTheme(color: Colorz.white, elevation: 0),
         primarySwatch: Colors.blue,
       ),
