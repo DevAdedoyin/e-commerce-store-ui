@@ -43,7 +43,7 @@ class HomeScreen extends StatelessWidget {
           const SizedBox(
             height: 15,
           ),
-          Container(
+          SizedBox(
             // color: Colorz.pinkColor,
             height: 250,
             child: ListView.builder(
@@ -79,11 +79,11 @@ class HomeScreen extends StatelessWidget {
   ];
 
   final List<String> _itemName = [
-    'Double Breasted Coat',
-    'Smart Collar Pea Coat',
-    'Tailored Pea Coat',
-    'Shower Resistant Coat',
-    'Vero-Moda Long Coat'
+    'Double Breasted',
+    'Smart Collar Pea',
+    'Tailored Pea',
+    'Shower Resistant',
+    'Vero-Moda Long'
   ];
 
   final List<String> _itemPrice = ['50', '43', '47', '47', '49'];
