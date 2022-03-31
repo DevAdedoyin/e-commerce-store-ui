@@ -1,3 +1,4 @@
+import 'package:e_commerce_store_ui/widgets/appbar.dart';
 import 'package:flutter/material.dart';
 
 class HomeScreen extends StatelessWidget {
@@ -6,10 +7,24 @@ class HomeScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        leading: ClipOval(
-          child: Image.asset('assets/images/profile_img.jpg'),
-        ),
+      body: Column(
+        children: [
+          const SizedBox(
+            height: 30,
+          ),
+          CustomAppbar(
+            widget: SizedBox(
+              height: 42,
+              width: 42,
+              child: ClipOval(
+                child: Image.asset(
+                  'assets/images/profile_img.jpg',
+                  fit: BoxFit.cover,
+                ),
+              ),
+            ),
+          )
+        ],
       ),
     );
   }
