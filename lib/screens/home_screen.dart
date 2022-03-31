@@ -41,12 +41,15 @@ class HomeScreen extends StatelessWidget {
             ),
           ),
           const SizedBox(
-            height: 20,
+            height: 15,
           ),
-          SizedBox(
-            height: 180,
+          Container(
+            // color: Colorz.pinkColor,
+            height: 250,
             child: ListView.builder(
                 shrinkWrap: true,
+                // itemExtent: 10,
+
                 itemCount: _imageUrls.length,
                 scrollDirection: Axis.horizontal,
                 itemBuilder: (_, index) => CustomCard(
@@ -71,16 +74,16 @@ class HomeScreen extends StatelessWidget {
     'https://images.asos-media.com/products/asos-design-double-breasted-coat-in-black/23385810-1-black?\$n_320w\$&wid=317&fit=constrain',
     'https://images.asos-media.com/products/forever-new-smart-collar-pea-coat-in-black/200414986-1-black?\$n_320w\$&wid=317&fit=constrain',
     'https://images.asos-media.com/products/mango-tailored-pea-coat-in-light-blue/201685473-1-blue?\$n_320w\$&wid=317&fit=constrain',
-    'https://images.asos-media.com/products/forever-new-curve-top-faux-fur-collar-coat-in-grey/200987180-1-grey?\$n_320w\$&wid=317&fit=constrain',
-    'https://images.asos-media.com/products/forever-new-petite-smart-collar-pea-coat-in-grey/200460866-1-cream?\$n_320w\$&wid=317&fit=constrain'
+    'https://images.asos-media.com/products/asos-design-shower-resistant-double-breasted-trench-coat-in-stone/22855673-1-stone?\$n_320w\$&wid=317&fit=constrain',
+    'https://images.asos-media.com/products/vero-moda-long-trench-coat-in-black/202064783-1-black?\$n_320w\$&wid=317&fit=constrain'
   ];
 
   final List<String> _itemName = [
     'Double Breasted Coat',
     'Smart Collar Pea Coat',
     'Tailored Pea Coat',
-    'Curve Top Faux Collar Coat',
-    'Petite Smart Collar Pea Coat'
+    'Shower Resistant Coat',
+    'Vero-Moda Long Coat'
   ];
 
   final List<String> _itemPrice = ['50', '43', '47', '47', '49'];

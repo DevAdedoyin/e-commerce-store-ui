@@ -11,17 +11,34 @@ class CustomCard extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      color: Colorz.white,
+      // color: Colorz.primaryColor,
+
+      alignment: Alignment.center,
+      margin: const EdgeInsets.only(right: 10),
       child: Column(
         children: [
-          Expanded(flex: 8, child: Image.network(imageUrl!)),
+          Expanded(
+            flex: 8,
+            child: SizedBox(
+              height: 120,
+              width: 150,
+              child: ClipRRect(
+                borderRadius: BorderRadius.circular(7),
+                child: Image.network(
+                  imageUrl!,
+                  fit: BoxFit.cover,
+                ),
+              ),
+            ),
+          ),
           Expanded(
             flex: 2,
             child: SizedBox(
-                child: Row(
-              mainAxisAlignment: MainAxisAlignment.spaceAround,
-              children: [Text(itemName!), Text('\$$itemPrice')],
-            )),
+              child: Row(
+                mainAxisAlignment: MainAxisAlignment.spaceAround,
+                children: [Text(itemName!), Text('\$$itemPrice')],
+              ),
+            ),
           )
         ],
       ),
