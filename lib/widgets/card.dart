@@ -12,7 +12,7 @@ class CustomCard extends StatelessWidget {
   Widget build(BuildContext context) {
     return Container(
       // color: Colorz.primaryColor,
-      width: 150,
+      width: 170,
       alignment: Alignment.center,
       margin: const EdgeInsets.only(right: 10, left: 10),
       child: Column(
@@ -20,8 +20,8 @@ class CustomCard extends StatelessWidget {
           Expanded(
             flex: 8,
             child: SizedBox(
-              height: 120,
-              width: 150,
+              height: 170,
+              width: 170,
               child: ClipRRect(
                 borderRadius: BorderRadius.circular(7),
                 child: Image.network(
@@ -36,7 +36,7 @@ class CustomCard extends StatelessWidget {
             child: SizedBox(
               child: Row(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                children: [Text(itemName!), Text('\$$itemPrice')],
+                children: [Text(itemName!), Text('$itemPrice')],
               ),
             ),
           )
