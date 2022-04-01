@@ -9,6 +9,18 @@ class HomeScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      floatingActionButtonLocation: FloatingActionButtonLocation.centerFloat,
+      floatingActionButton: Container(
+        width: 70,
+        height: 40,
+        decoration: BoxDecoration(
+            borderRadius: BorderRadius.circular(20),
+            color: Colorz.primaryColor),
+        child: const Icon(
+          Icons.search,
+          color: Colorz.ghostWhite,
+        ),
+      ),
       body: SingleChildScrollView(
         child: Column(
           children: [
