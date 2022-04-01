@@ -36,7 +36,20 @@ class CustomCard extends StatelessWidget {
             child: SizedBox(
               child: Row(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                children: [Text(itemName!), Text('$itemPrice')],
+                children: [
+                  Text(
+                    itemName!,
+                    style: const TextStyle(
+                        fontSize: 15, fontWeight: FontWeight.bold),
+                  ),
+                  Text(
+                    '$itemPrice',
+                    style: const TextStyle(
+                        fontSize: 15,
+                        fontWeight: FontWeight.bold,
+                        color: Colors.black54),
+                  )
+                ],
               ),
             ),
           )

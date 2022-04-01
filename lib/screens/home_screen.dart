@@ -35,7 +35,11 @@ class HomeScreen extends StatelessWidget {
               children: List.generate(
                 _categories.length,
                 (index) => Chip(
-                  label: Text(_categories[index]),
+                  label: Text(
+                    _categories[index],
+                    style: const TextStyle(
+                        fontSize: 13, fontWeight: FontWeight.bold),
+                  ),
                   backgroundColor:
                       index != 0 ? Colorz.ghostWhite : Colorz.pinkColor,
                 ),
@@ -59,14 +63,14 @@ class HomeScreen extends StatelessWidget {
                       )),
             ),
             const SizedBox(
-              height: 10,
+              height: 5,
             ),
             Container(
               alignment: Alignment.centerLeft,
               padding: const EdgeInsets.symmetric(horizontal: 10),
               child: const Text(
                 'Recommended for You',
-                style: TextStyle(fontSize: 17),
+                style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold),
               ),
             ),
             const SizedBox(
