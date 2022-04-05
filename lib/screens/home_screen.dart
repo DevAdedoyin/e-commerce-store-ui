@@ -68,10 +68,14 @@ class HomeScreen extends StatelessWidget {
 
                   itemCount: _imageUrls.length,
                   scrollDirection: Axis.horizontal,
-                  itemBuilder: (_, index) => CustomCard(
-                        imageUrl: _imageUrls[index],
-                        itemName: _itemName[index],
-                        itemPrice: '\$${_itemPrice[index]}',
+                  itemBuilder: (_, index) => InkWell(
+                        onTap: () =>
+                            Navigator.pushNamed(context, 'detail-screen'),
+                        child: CustomCard(
+                          imageUrl: _imageUrls[index],
+                          itemName: _itemName[index],
+                          itemPrice: '\$${_itemPrice[index]}',
+                        ),
                       )),
             ),
             const SizedBox(

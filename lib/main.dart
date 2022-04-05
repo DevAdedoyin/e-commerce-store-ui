@@ -1,3 +1,4 @@
+import 'package:e_commerce_store_ui/screens/detail_screen.dart';
 import 'package:e_commerce_store_ui/screens/home_screen.dart';
 import 'package:e_commerce_store_ui/themes/colors.dart';
 import 'package:flutter/material.dart';
@@ -25,6 +26,7 @@ class MyApp extends StatelessWidget {
         appBarTheme: const AppBarTheme(color: Colorz.white, elevation: 0),
         primarySwatch: Colors.blue,
       ),
+      routes: {'detail-screen': (context) => const DetailScreen()},
       home: HomeScreen(),
     );
   }
