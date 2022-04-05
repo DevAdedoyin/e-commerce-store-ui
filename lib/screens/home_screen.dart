@@ -69,8 +69,10 @@ class HomeScreen extends StatelessWidget {
                   itemCount: _imageUrls.length,
                   scrollDirection: Axis.horizontal,
                   itemBuilder: (_, index) => InkWell(
-                        onTap: () =>
-                            Navigator.pushNamed(context, 'detail-screen'),
+                        onTap: () => index == 0
+                            ? Navigator.pushNamed(context, 'detail-screen',
+                                arguments: {'image-link': _imageUrls[index]})
+                            : null,
                         child: CustomCard(
                           imageUrl: _imageUrls[index],
                           itemName: _itemName[index],
