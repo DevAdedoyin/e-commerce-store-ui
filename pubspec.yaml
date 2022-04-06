@@ -36,6 +36,7 @@ dependencies:
 
   badges:
   modal_bottom_sheet:
+  draggable_bottom_sheet:
 
 dev_dependencies:
   flutter_test:
