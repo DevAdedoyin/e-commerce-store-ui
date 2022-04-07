@@ -4,7 +4,7 @@ import 'package:flutter/services.dart';
 import 'package:draggable_bottom_sheet/draggable_bottom_sheet.dart';
 
 class DetailScreen extends StatelessWidget {
-  const DetailScreen({Key? key}) : super(key: key);
+  DetailScreen({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -44,7 +44,7 @@ class DetailScreen extends StatelessWidget {
                     (index) => Container(
                       height: 8,
                       width: 8,
-                      margin: const EdgeInsets.symmetric(horizontal: 5),
+                      margin: const EdgeInsets.symmetric(horizontal: 3),
                       decoration: BoxDecoration(
                         color: Colorz.ghostWhite,
                         borderRadius: BorderRadius.circular(20),
@@ -59,23 +59,103 @@ class DetailScreen extends StatelessWidget {
               Container(
                 width: double.maxFinite,
                 padding:
-                    const EdgeInsets.symmetric(horizontal: 10, vertical: 7),
+                    const EdgeInsets.symmetric(horizontal: 15, vertical: 7),
                 decoration: const BoxDecoration(
                   color: Colorz.white,
                   borderRadius: BorderRadius.only(
-                    topLeft: Radius.circular(20),
-                    topRight: Radius.circular(20),
+                    topLeft: Radius.circular(30),
+                    topRight: Radius.circular(30),
                   ),
                 ),
                 child: Column(
                   children: [
                     Container(
-                      height: 7,
+                      height: 6,
                       width: 65,
+                      margin: const EdgeInsets.symmetric(vertical: 3),
                       decoration: BoxDecoration(
-                          color: Colorz.greyColor,
-                          borderRadius:
-                              const BorderRadius.all(Radius.circular(10))),
+                        color: Colorz.greyColor,
+                        borderRadius: const BorderRadius.all(
+                          Radius.circular(10),
+                        ),
+                      ),
+                    ),
+                    const SizedBox(
+                      height: 10,
+                    ),
+                    SizedBox(
+                      height: 120,
+                      child: Row(
+                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                        children: [
+                          Column(
+                            crossAxisAlignment: CrossAxisAlignment.start,
+                            children: [
+                              const Text(
+                                'Double Breasted Coat',
+                                style: TextStyle(
+                                    color: Colors.black,
+                                    fontWeight: FontWeight.bold,
+                                    fontSize: 22),
+                              ),
+                              const SizedBox(
+                                height: 8,
+                              ),
+                              Text(
+                                '\$ 80',
+                                style: TextStyle(
+                                    color: Colors.grey[500], fontSize: 18),
+                              ),
+                              const SizedBox(
+                                height: 10,
+                              ),
+                              const Text(
+                                'Your Size',
+                                style: TextStyle(fontSize: 14),
+                              ),
+                              const SizedBox(
+                                height: 7,
+                              ),
+                              Row(
+                                children: List.generate(
+                                    4,
+                                    (index) => SizedBox(
+                                          width: 30,
+                                          height: 27,
+                                          child: Card(
+                                            color: index == 1
+                                                ? Colorz.pinkColor
+                                                : Colorz.ghostWhite,
+                                            elevation: 5,
+                                            child: Center(
+                                              child: Text(
+                                                _sizes[index],
+                                                textAlign: TextAlign.center,
+                                                style: const TextStyle(
+                                                    fontSize: 14),
+                                              ),
+                                            ),
+                                          ),
+                                        )),
+                              )
+                            ],
+                          ),
+                          Column(
+                            children: List.generate(
+                                4,
+                                (index) => Container(
+                                      margin: const EdgeInsets.symmetric(
+                                          vertical: 7),
+                                      height: index == 0 ? 16 : 13,
+                                      width: index == 0 ? 16 : 13,
+                                      decoration: BoxDecoration(
+                                          color: Colorz.itemColorz[index],
+                                          borderRadius:
+                                              BorderRadius.circular(10)),
+                                    )),
+                          )
+                        ],
+                      ),
                     )
                   ],
                 ),
@@ -88,4 +168,6 @@ class DetailScreen extends StatelessWidget {
       ),
     );
   }
+
+  final List<String> _sizes = ['S', 'M', 'L', 'XL'];
 }

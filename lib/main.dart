@@ -26,7 +26,7 @@ class MyApp extends StatelessWidget {
         appBarTheme: const AppBarTheme(color: Colorz.white, elevation: 0),
         primarySwatch: Colors.blue,
       ),
-      routes: {'detail-screen': (context) => const DetailScreen()},
+      routes: {'detail-screen': (context) => DetailScreen()},
       home: HomeScreen(),
     );
   }
