@@ -25,25 +25,66 @@ class DetailScreen extends StatelessWidget {
         ),
         previewChild: SizedBox(
           child: Column(
+            // mainAxisSize: MainAxisSize.min,
             children: [
+              Container(
+                alignment: Alignment.bottomRight,
+                child: IconButton(
+                    onPressed: () {},
+                    icon: const Icon(
+                      Icons.favorite,
+                      color: Colors.red,
+                    )),
+              ),
               SizedBox(
                 child: Row(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  children: List.generate(
+                    3,
+                    (index) => Container(
+                      height: 8,
+                      width: 8,
+                      margin: const EdgeInsets.symmetric(horizontal: 5),
+                      decoration: BoxDecoration(
+                        color: Colorz.ghostWhite,
+                        borderRadius: BorderRadius.circular(20),
+                      ),
+                    ),
+                  ),
+                ),
+              ),
+              const SizedBox(
+                height: 15,
+              ),
+              Container(
+                width: double.maxFinite,
+                padding:
+                    const EdgeInsets.symmetric(horizontal: 10, vertical: 7),
+                decoration: const BoxDecoration(
+                  color: Colorz.white,
+                  borderRadius: BorderRadius.only(
+                    topLeft: Radius.circular(20),
+                    topRight: Radius.circular(20),
+                  ),
+                ),
+                child: Column(
                   children: [
-                    Expanded(
-                        child: Row(
-                      children: List.generate(
-                          3,
-                          (index) => Container(
-                                color: Colorz.white,
-                              )),
-                    ))
+                    Container(
+                      height: 7,
+                      width: 65,
+                      decoration: BoxDecoration(
+                          color: Colorz.greyColor,
+                          borderRadius:
+                              const BorderRadius.all(Radius.circular(10))),
+                    )
                   ],
                 ),
-              )
+              ),
             ],
           ),
         ),
         expandedChild: Container(),
+        minExtent: 300,
       ),
     );
   }

@@ -6,4 +6,5 @@ class Colorz {
   static const pinkColor = Color.fromRGBO(255, 192, 203, 1);
   static const ghostWhite = Color.fromRGBO(248, 248, 255, 1);
   static const white = Color.fromRGBO(255, 255, 255, 1);
+  static Color? greyColor = Colors.grey;
 }
