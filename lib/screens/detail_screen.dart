@@ -83,8 +83,9 @@ class DetailScreen extends StatelessWidget {
                     const SizedBox(
                       height: 10,
                     ),
-                    SizedBox(
-                      height: 120,
+                    Container(
+                      alignment: Alignment.topCenter,
+                      height: 130,
                       child: Row(
                         mainAxisAlignment: MainAxisAlignment.spaceBetween,
                         children: [
@@ -111,52 +112,78 @@ class DetailScreen extends StatelessWidget {
                               ),
                               const Text(
                                 'Your Size',
-                                style: TextStyle(fontSize: 14),
+                                style: TextStyle(
+                                  fontSize: 14,
+                                  color: Colors.black,
+                                ),
                               ),
                               const SizedBox(
                                 height: 7,
                               ),
                               Row(
                                 children: List.generate(
-                                    4,
-                                    (index) => SizedBox(
-                                          width: 30,
-                                          height: 27,
-                                          child: Card(
-                                            color: index == 1
-                                                ? Colorz.pinkColor
-                                                : Colorz.ghostWhite,
-                                            elevation: 5,
-                                            child: Center(
-                                              child: Text(
-                                                _sizes[index],
-                                                textAlign: TextAlign.center,
-                                                style: const TextStyle(
-                                                    fontSize: 14),
-                                              ),
-                                            ),
+                                  4,
+                                  (index) => SizedBox(
+                                    width: 30,
+                                    height: 27,
+                                    child: Card(
+                                      color: index == 1
+                                          ? Colorz.pinkColor
+                                          : Colorz.ghostWhite,
+                                      elevation: 5,
+                                      child: Center(
+                                        child: Text(
+                                          _sizes[index],
+                                          textAlign: TextAlign.center,
+                                          style: const TextStyle(
+                                            fontSize: 14,
+                                            color: Colors.black,
                                           ),
-                                        )),
-                              )
+                                        ),
+                                      ),
+                                    ),
+                                  ),
+                                ),
+                              ),
                             ],
                           ),
-                          Column(
-                            children: List.generate(
+                          SizedBox(
+                            child: Column(
+                              children: List.generate(
                                 4,
                                 (index) => Container(
-                                      margin: const EdgeInsets.symmetric(
-                                          vertical: 7),
-                                      height: index == 0 ? 16 : 13,
-                                      width: index == 0 ? 16 : 13,
-                                      decoration: BoxDecoration(
-                                          color: Colorz.itemColorz[index],
-                                          borderRadius:
-                                              BorderRadius.circular(10)),
-                                    )),
-                          )
+                                  margin:
+                                      const EdgeInsets.symmetric(vertical: 7),
+                                  height: index == 0 ? 16 : 13,
+                                  width: index == 0 ? 16 : 13,
+                                  decoration: BoxDecoration(
+                                      color: Colorz.itemColorz[index],
+                                      borderRadius: BorderRadius.circular(10)),
+                                ),
+                              ),
+                            ),
+                          ),
                         ],
                       ),
-                    )
+                    ),
+                    Container(
+                      margin: const EdgeInsets.symmetric(horizontal: 5),
+                      width: 350,
+                      height: 40,
+                      child: ElevatedButton(
+                        onPressed: () {},
+                        child: const Text('Add to Cart'),
+                        style: ButtonStyle(
+                          backgroundColor:
+                              MaterialStateProperty.all(Colors.black),
+                          shape: MaterialStateProperty.all(
+                            RoundedRectangleBorder(
+                              borderRadius: BorderRadius.circular(20),
+                            ),
+                          ),
+                        ),
+                      ),
+                    ),
                   ],
                 ),
               ),
