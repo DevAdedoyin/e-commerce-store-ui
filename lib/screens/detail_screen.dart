@@ -29,13 +29,22 @@ class DetailScreen extends StatelessWidget {
             // mainAxisSize: MainAxisSize.min,
             children: [
               Container(
+                margin: const EdgeInsets.only(right: 10),
                 alignment: Alignment.bottomRight,
-                child: IconButton(
-                    onPressed: () {},
-                    icon: const Icon(
-                      Icons.favorite,
-                      color: Colors.red,
-                    )),
+                child: ClipOval(
+                  child: Container(
+                    width: 40,
+                    height: 40,
+                    alignment: Alignment.center,
+                    color: Colors.grey[350],
+                    child: IconButton(
+                        onPressed: () {},
+                        icon: const Icon(
+                          Icons.favorite_border,
+                          color: Colors.black,
+                        )),
+                  ),
+                ),
               ),
               SizedBox(
                 child: Row(
