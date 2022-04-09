@@ -24,6 +24,7 @@ class DetailScreen extends StatelessWidget {
           ),
         ),
         previewChild: SizedBox(
+          // height: 190,
           child: Column(
             // mainAxisSize: MainAxisSize.min,
             children: [
@@ -166,8 +167,8 @@ class DetailScreen extends StatelessWidget {
                         ],
                       ),
                     ),
-                    Container(
-                      margin: const EdgeInsets.symmetric(horizontal: 5),
+                    SizedBox(
+                      // margin: const EdgeInsets.symmetric(horizontal: 5),
                       width: 350,
                       height: 40,
                       child: ElevatedButton(
@@ -191,7 +192,7 @@ class DetailScreen extends StatelessWidget {
           ),
         ),
         expandedChild: Container(),
-        minExtent: 300,
+        minExtent: 278,
       ),
     );
   }
