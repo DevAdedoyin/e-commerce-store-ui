@@ -25,8 +25,17 @@ class DetailScreen extends StatelessWidget {
           ),
         ),
         previewChild: PreviewChild(),
-        expandedChild: Container(),
-        minExtent: 278,
+        expandedChild: Container(
+          child: Column(
+            children: [
+              PreviewChild(),
+              Row(
+                children: List.generate(3, (index) => Container()),
+              )
+            ],
+          ),
+        ),
+        minExtent: 279,
       ),
     );
   }
