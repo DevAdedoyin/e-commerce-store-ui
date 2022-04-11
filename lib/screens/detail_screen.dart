@@ -95,7 +95,7 @@ class DetailScreen extends StatelessWidget {
                     ),
                     Container(
                       alignment: Alignment.topCenter,
-                      height: 130,
+                      height: 137,
                       child: Row(
                         mainAxisAlignment: MainAxisAlignment.spaceBetween,
                         children: [
@@ -105,7 +105,7 @@ class DetailScreen extends StatelessWidget {
                               const Text(
                                 'Double Breasted Coat',
                                 style: TextStyle(
-                                    color: Colors.black,
+                                    color: Color.fromRGBO(0, 0, 0, 1),
                                     fontWeight: FontWeight.bold,
                                     fontSize: 22),
                               ),
