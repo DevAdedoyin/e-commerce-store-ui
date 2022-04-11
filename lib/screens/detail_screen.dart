@@ -1,4 +1,5 @@
 import 'package:e_commerce_store_ui/themes/colors.dart';
+import 'package:e_commerce_store_ui/widgets/expanded_child.dart';
 import 'package:e_commerce_store_ui/widgets/preview_child.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
@@ -25,16 +26,7 @@ class DetailScreen extends StatelessWidget {
           ),
         ),
         previewChild: PreviewChild(),
-        expandedChild: Container(
-          child: Column(
-            children: [
-              PreviewChild(),
-              Row(
-                children: List.generate(3, (index) => Container()),
-              )
-            ],
-          ),
-        ),
+        expandedChild: ExpandedChild(),
         minExtent: 279,
       ),
     );

@@ -1,4 +1,5 @@
 import 'package:e_commerce_store_ui/themes/colors.dart';
+import 'package:e_commerce_store_ui/widgets/coat_info.dart';
 import 'package:flutter/material.dart';
 
 class ExpandedChild extends StatelessWidget {
@@ -73,7 +74,7 @@ class ExpandedChild extends StatelessWidget {
                 const SizedBox(
                   height: 10,
                 ),
-                
+                CoatInfoWidget(),
                 SizedBox(
                   // margin: const EdgeInsets.symmetric(horizontal: 5),
                   width: 350,
@@ -98,6 +99,4 @@ class ExpandedChild extends StatelessWidget {
       ),
     );
   }
-
-  
 }
