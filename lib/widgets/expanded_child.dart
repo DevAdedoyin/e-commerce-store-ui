@@ -3,7 +3,7 @@ import 'package:e_commerce_store_ui/widgets/coat_info.dart';
 import 'package:flutter/material.dart';
 
 class ExpandedChild extends StatelessWidget {
-  ExpandedChild({Key? key}) : super(key: key);
+  const ExpandedChild({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -20,26 +20,10 @@ class ExpandedChild extends StatelessWidget {
                 alignment: Alignment.center,
                 color: Colors.grey[350],
                 child: IconButton(
-                    onPressed: () {},
-                    icon: const Icon(
-                      Icons.favorite_border,
-                      color: Colors.black,
-                    )),
-              ),
-            ),
-          ),
-          SizedBox(
-            child: Row(
-              mainAxisAlignment: MainAxisAlignment.center,
-              children: List.generate(
-                3,
-                (index) => Container(
-                  height: 8,
-                  width: 8,
-                  margin: const EdgeInsets.symmetric(horizontal: 3),
-                  decoration: BoxDecoration(
-                    color: Colorz.ghostWhite,
-                    borderRadius: BorderRadius.circular(20),
+                  onPressed: () {},
+                  icon: const Icon(
+                    Icons.favorite_border,
+                    color: Colors.black,
                   ),
                 ),
               ),
@@ -75,6 +59,48 @@ class ExpandedChild extends StatelessWidget {
                   height: 10,
                 ),
                 CoatInfoWidget(),
+                Row(
+                  children: List.generate(
+                    3,
+                    (index) => Container(
+                      width: 70,
+                      height: 30,
+                      decoration: BoxDecoration(
+                          borderRadius: BorderRadius.circular(50),
+                          color:
+                              index == 0 ? Colorz.pinkColor : Colorz.greyColor),
+                    ),
+                  ),
+                ),
+                Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                  children: const [
+                    Text(
+                      'Composition',
+                      style: TextStyle(fontWeight: FontWeight.bold),
+                    ),
+                    Text(
+                      'Country',
+                      style: TextStyle(fontWeight: FontWeight.bold),
+                    )
+                  ],
+                ),
+                Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                  children: const [
+                    Text(
+                      '100% polyester',
+                      style: TextStyle(fontWeight: FontWeight.bold),
+                    ),
+                    Text(
+                      'Poland',
+                      style: TextStyle(fontWeight: FontWeight.bold),
+                    ),
+                  ],
+                ),
+                const Text('Care'),
+                const Text(
+                    'Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt.'),
                 SizedBox(
                   // margin: const EdgeInsets.symmetric(horizontal: 5),
                   width: 350,
