@@ -59,21 +59,28 @@ class ExpandedChild extends StatelessWidget {
                   height: 10,
                 ),
                 CoatInfoWidget(),
-                Row(
-                  mainAxisAlignment: MainAxisAlignment.spaceAround,
-                  children: List.generate(
-                    3,
-                    (index) => Container(
-                      alignment: Alignment.center,
-                      width: 90,
-                      height: 32,
-                      decoration: BoxDecoration(
-                          borderRadius: BorderRadius.circular(50),
-                          color:
-                              index == 0 ? Colorz.pinkColor : Colorz.greyColor),
-                      child: Text(
-                        _dop[index],
-                        style: const TextStyle(fontWeight: FontWeight.bold),
+                Container(
+                  margin: const EdgeInsets.symmetric(vertical: 5),
+                  child: Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceAround,
+                    children: List.generate(
+                      3,
+                      (index) => Container(
+                        alignment: Alignment.center,
+                        width: 90,
+                        height: 32,
+                        decoration: BoxDecoration(
+                            borderRadius: BorderRadius.circular(50),
+                            color: index == 0
+                                ? Colorz.pinkColor
+                                : Colors.grey[300]),
+                        child: Text(
+                          _dop[index],
+                          style: TextStyle(
+                              fontWeight: index == 0
+                                  ? FontWeight.bold
+                                  : FontWeight.normal),
+                        ),
                       ),
                     ),
                   ),
