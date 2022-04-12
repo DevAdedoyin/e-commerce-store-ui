@@ -8,7 +8,7 @@ class CoatInfoWidget extends StatelessWidget {
   Widget build(BuildContext context) {
     return Container(
       alignment: Alignment.topCenter,
-      height: 137,
+      height: 125,
       child: Row(
         mainAxisAlignment: MainAxisAlignment.spaceBetween,
         children: [

@@ -3,7 +3,7 @@ import 'package:e_commerce_store_ui/widgets/coat_info.dart';
 import 'package:flutter/material.dart';
 
 class ExpandedChild extends StatelessWidget {
-  const ExpandedChild({Key? key}) : super(key: key);
+  ExpandedChild({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -60,15 +60,21 @@ class ExpandedChild extends StatelessWidget {
                 ),
                 CoatInfoWidget(),
                 Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceAround,
                   children: List.generate(
                     3,
                     (index) => Container(
-                      width: 70,
-                      height: 30,
+                      alignment: Alignment.center,
+                      width: 90,
+                      height: 32,
                       decoration: BoxDecoration(
                           borderRadius: BorderRadius.circular(50),
                           color:
                               index == 0 ? Colorz.pinkColor : Colorz.greyColor),
+                      child: Text(
+                        _dop[index],
+                        style: const TextStyle(fontWeight: FontWeight.bold),
+                      ),
                     ),
                   ),
                 ),
@@ -125,4 +131,6 @@ class ExpandedChild extends StatelessWidget {
       ),
     );
   }
+
+  final List<String> _dop = ['Details', 'Orders', 'Payment'];
 }
