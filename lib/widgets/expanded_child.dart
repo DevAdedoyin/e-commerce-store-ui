@@ -85,35 +85,53 @@ class ExpandedChild extends StatelessWidget {
                     ),
                   ),
                 ),
-                Row(
-                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                  children: const [
-                    Text(
-                      'Composition',
-                      style: TextStyle(fontWeight: FontWeight.bold),
-                    ),
-                    Text(
-                      'Country',
-                      style: TextStyle(fontWeight: FontWeight.bold),
-                    )
-                  ],
+                Container(
+                  margin: const EdgeInsets.symmetric(vertical: 10),
+                  child: Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                    children: const [
+                      Text(
+                        'Composition',
+                        style: TextStyle(
+                            fontWeight: FontWeight.bold, fontSize: 16),
+                      ),
+                      Text(
+                        'Country',
+                        style: TextStyle(
+                            fontWeight: FontWeight.bold, fontSize: 16),
+                      )
+                    ],
+                  ),
                 ),
                 Row(
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: const [
                     Text(
                       '100% polyester',
-                      style: TextStyle(fontWeight: FontWeight.bold),
+                      style: TextStyle(fontSize: 16),
                     ),
                     Text(
                       'Poland',
-                      style: TextStyle(fontWeight: FontWeight.bold),
+                      style: TextStyle(fontSize: 16),
                     ),
                   ],
                 ),
-                const Text('Care'),
-                const Text(
-                    'Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt.'),
+                Container(
+                  alignment: Alignment.centerLeft,
+                  margin: const EdgeInsets.symmetric(vertical: 12),
+                  child: const Text(
+                    'Care',
+                    style: TextStyle(fontWeight: FontWeight.bold, fontSize: 16),
+                  ),
+                ),
+                Text(
+                  'Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt.',
+                  style: TextStyle(
+                    fontSize: 15.5,
+                    color: Colors.grey[500],
+                    fontWeight: FontWeight.bold,
+                  ),
+                ),
                 SizedBox(
                   // margin: const EdgeInsets.symmetric(horizontal: 5),
                   width: 350,
