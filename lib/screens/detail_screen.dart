@@ -25,9 +25,9 @@ class DetailScreen extends StatelessWidget {
             ),
           ),
         ),
-        previewChild: PreviewChild(),
+        previewChild: SingleChildScrollView(child: PreviewChild()),
         expandedChild: SingleChildScrollView(child: ExpandedChild()),
-        minExtent: 279,
+        minExtent: 290,
         maxExtent: 550,
       ),
     );

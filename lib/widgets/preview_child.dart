@@ -25,7 +25,7 @@ class PreviewChild extends StatelessWidget {
                     onPressed: () {},
                     icon: const Icon(
                       Icons.favorite_border,
-                      color: Colors.black,
+                      color: Colors.black38,
                     )),
               ),
             ),
@@ -77,8 +77,8 @@ class PreviewChild extends StatelessWidget {
                   height: 10,
                 ),
                 CoatInfoWidget(),
-                SizedBox(
-                  // margin: const EdgeInsets.symmetric(horizontal: 5),
+                Container(
+                  margin: const EdgeInsets.symmetric(vertical: 15),
                   width: 350,
                   height: 40,
                   child: ElevatedButton(
