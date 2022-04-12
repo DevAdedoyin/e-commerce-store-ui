@@ -23,7 +23,7 @@ class ExpandedChild extends StatelessWidget {
                   onPressed: () {},
                   icon: const Icon(
                     Icons.favorite_border,
-                    color: Colors.black,
+                    color: Colors.black38,
                   ),
                 ),
               ),
@@ -105,20 +105,26 @@ class ExpandedChild extends StatelessWidget {
                 ),
                 Row(
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                  children: const [
+                  children: [
                     Text(
                       '100% polyester',
-                      style: TextStyle(fontSize: 16),
+                      style: TextStyle(
+                        fontSize: 16.5,
+                        color: Colors.grey[500],
+                      ),
                     ),
                     Text(
                       'Poland',
-                      style: TextStyle(fontSize: 16),
+                      style: TextStyle(
+                        fontSize: 16.5,
+                        color: Colors.grey[500],
+                      ),
                     ),
                   ],
                 ),
                 Container(
                   alignment: Alignment.centerLeft,
-                  margin: const EdgeInsets.symmetric(vertical: 12),
+                  margin: const EdgeInsets.symmetric(vertical: 14),
                   child: const Text(
                     'Care',
                     style: TextStyle(fontWeight: FontWeight.bold, fontSize: 16),
@@ -132,8 +138,8 @@ class ExpandedChild extends StatelessWidget {
                     fontWeight: FontWeight.bold,
                   ),
                 ),
-                SizedBox(
-                  // margin: const EdgeInsets.symmetric(horizontal: 5),
+                Container(
+                  margin: const EdgeInsets.symmetric(vertical: 18),
                   width: 350,
                   height: 40,
                   child: ElevatedButton(
