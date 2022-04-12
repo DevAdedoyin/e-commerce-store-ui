@@ -8,7 +8,7 @@ class CoatInfoWidget extends StatelessWidget {
   Widget build(BuildContext context) {
     return Container(
       alignment: Alignment.topCenter,
-      height: 125,
+      height: 130,
       child: Row(
         mainAxisAlignment: MainAxisAlignment.spaceBetween,
         children: [
@@ -71,14 +71,31 @@ class CoatInfoWidget extends StatelessWidget {
             child: Column(
               children: List.generate(
                 4,
-                (index) => Container(
-                  margin: const EdgeInsets.symmetric(vertical: 7),
-                  height: index == 0 ? 16 : 13,
-                  width: index == 0 ? 16 : 13,
-                  decoration: BoxDecoration(
-                      color: Colorz.itemColorz[index],
-                      borderRadius: BorderRadius.circular(10)),
-                ),
+                (index) => index == 0
+                    ? Container(
+                        alignment: Alignment.center,
+                        margin: const EdgeInsets.symmetric(vertical: 7),
+                        height: 25,
+                        width: 25,
+                        decoration: BoxDecoration(
+                            color: Colorz.greyColor,
+                            borderRadius: BorderRadius.circular(30)),
+                        child: Container(
+                          height: 17,
+                          width: 17,
+                          decoration: BoxDecoration(
+                              color: Colors.black,
+                              borderRadius: BorderRadius.circular(10)),
+                        ),
+                      )
+                    : Container(
+                        margin: const EdgeInsets.symmetric(vertical: 7),
+                        height: 15,
+                        width: 15,
+                        decoration: BoxDecoration(
+                            color: Colorz.itemColorz[index],
+                            borderRadius: BorderRadius.circular(10)),
+                      ),
               ),
             ),
           ),
