@@ -75,14 +75,14 @@ class CoatInfoWidget extends StatelessWidget {
                     ? Container(
                         alignment: Alignment.center,
                         margin: const EdgeInsets.symmetric(vertical: 7),
-                        height: 25,
-                        width: 25,
+                        height: 22,
+                        width: 22,
                         decoration: BoxDecoration(
                             color: Colorz.greyColor,
                             borderRadius: BorderRadius.circular(30)),
                         child: Container(
-                          height: 17,
-                          width: 17,
+                          height: 15,
+                          width: 15,
                           decoration: BoxDecoration(
                               color: Colors.black,
                               borderRadius: BorderRadius.circular(10)),
