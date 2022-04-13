@@ -110,14 +110,16 @@ class ExpandedChild extends StatelessWidget {
                       '100% polyester',
                       style: TextStyle(
                         fontSize: 16.5,
-                        color: Colors.grey[500],
+                        color: Colorz.greyColor500,
+                        fontWeight: FontWeight.bold,
                       ),
                     ),
                     Text(
                       'Poland',
                       style: TextStyle(
                         fontSize: 16.5,
-                        color: Colors.grey[500],
+                        color: Colorz.greyColor500,
+                        fontWeight: FontWeight.bold,
                       ),
                     ),
                   ],
@@ -134,7 +136,7 @@ class ExpandedChild extends StatelessWidget {
                   'Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt.',
                   style: TextStyle(
                     fontSize: 15.5,
-                    color: Colors.grey[500],
+                    color: Colorz.greyColor500,
                     fontWeight: FontWeight.bold,
                   ),
                 ),

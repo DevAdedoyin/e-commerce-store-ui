@@ -7,6 +7,7 @@ class Colorz {
   static const ghostWhite = Color.fromRGBO(248, 248, 255, 1);
   static const white = Color.fromRGBO(255, 255, 255, 1);
   static Color? greyColor = Colors.grey;
+  static Color? greyColor500 = Colors.grey[500];
 
   static const itemColorz = [
     Colors.black,

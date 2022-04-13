@@ -27,7 +27,11 @@ class CoatInfoWidget extends StatelessWidget {
               ),
               Text(
                 '\$ 80',
-                style: TextStyle(color: Colors.grey[500], fontSize: 18),
+                style: TextStyle(
+                  color: Colorz.greyColor500,
+                  fontSize: 18,
+                  fontWeight: FontWeight.bold,
+                ),
               ),
               const SizedBox(
                 height: 10,
