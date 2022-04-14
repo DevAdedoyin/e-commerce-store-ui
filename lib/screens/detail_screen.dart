@@ -7,7 +7,7 @@ import 'package:flutter/services.dart';
 import 'package:draggable_bottom_sheet/draggable_bottom_sheet.dart';
 
 class DetailScreen extends StatefulWidget {
-  DetailScreen({Key? key}) : super(key: key);
+  const DetailScreen({Key? key}) : super(key: key);
 
   @override
   State<DetailScreen> createState() => _DetailScreenState();
@@ -38,7 +38,7 @@ class _DetailScreenState extends State<DetailScreen> {
             ),
           ),
         ),
-        previewChild: SingleChildScrollView(child: PreviewChild()),
+        previewChild: const SingleChildScrollView(child:  PreviewChild()),
         expandedChild: SingleChildScrollView(child: ExpandedChild()),
         minExtent: 300,
         maxExtent: 560,

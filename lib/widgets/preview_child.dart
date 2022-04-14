@@ -1,9 +1,11 @@
+import 'package:e_commerce_store_ui/state/pageview_state.dart';
 import 'package:e_commerce_store_ui/themes/colors.dart';
 import 'package:e_commerce_store_ui/widgets/coat_info.dart';
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 
 class PreviewChild extends StatelessWidget {
-  PreviewChild({Key? key}) : super(key: key);
+  const PreviewChild({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -30,23 +32,33 @@ class PreviewChild extends StatelessWidget {
               ),
             ),
           ),
-          SizedBox(
-            child: Row(
-              mainAxisAlignment: MainAxisAlignment.center,
-              children: List.generate(
-                3,
-                (index) => Container(
-                  height: 8,
-                  width: 8,
-                  margin: const EdgeInsets.symmetric(horizontal: 3),
-                  decoration: BoxDecoration(
-                    color: Colorz.ghostWhite,
-                    borderRadius: BorderRadius.circular(20),
+          Obx(() {
+            return SizedBox(
+              child: Row(
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: List.generate(
+                  3,
+                  (index) => Container(
+                    height:
+                        PageviewConnector.pageview.currentPage.value == index
+                            ? 8
+                            : 7,
+                    width: PageviewConnector.pageview.currentPage.value == index
+                        ? 8
+                        : 7,
+                    margin: const EdgeInsets.symmetric(horizontal: 3),
+                    decoration: BoxDecoration(
+                      color:
+                          PageviewConnector.pageview.currentPage.value == index
+                              ? Colorz.ghostWhite
+                              : Colorz.greyColor500,
+                      borderRadius: BorderRadius.circular(20),
+                    ),
                   ),
                 ),
               ),
-            ),
-          ),
+            );
+          }),
           const SizedBox(
             height: 15,
           ),
