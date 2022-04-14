@@ -37,7 +37,7 @@ class _DetailScreenState extends State<DetailScreen> {
         ),
         previewChild: SingleChildScrollView(child: PreviewChild()),
         expandedChild: SingleChildScrollView(child: ExpandedChild()),
-        minExtent: 290,
+        minExtent: 300,
         maxExtent: 560,
       ),
     );
