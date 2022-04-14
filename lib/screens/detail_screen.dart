@@ -1,3 +1,4 @@
+import 'package:e_commerce_store_ui/state/pageview_state.dart';
 import 'package:e_commerce_store_ui/themes/colors.dart';
 import 'package:e_commerce_store_ui/widgets/expanded_child.dart';
 import 'package:e_commerce_store_ui/widgets/preview_child.dart';
@@ -17,12 +18,14 @@ class _DetailScreenState extends State<DetailScreen> {
   Widget build(BuildContext context) {
     SystemChrome.setSystemUIOverlayStyle(
         const SystemUiOverlayStyle(statusBarColor: Colors.transparent));
-    final imageUrl = ModalRoute.of(context)!.settings.arguments as Map;
     return Scaffold(
       body: DraggableBottomSheet(
         backgroundWidget: SizedBox(
           child: PageView.builder(
             itemCount: _bgImages.length,
+            onPageChanged: (page) {
+              PageviewConnector.pageview.currentPage.value = page;
+            },
             itemBuilder: (_, index) => Container(
               decoration: BoxDecoration(
                 image: DecorationImage(
