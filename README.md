@@ -10,4 +10,4 @@ https://user-images.githubusercontent.com/59482569/163799230-e88b4092-a5ef-4868-
 
 # The idea of the ui was gotten from https://dribbble.com/shots/14473051-eCommerce-Store-App-Design
 
-# The exact images used from the dribble link above was not available. Therefore, I got images used in this app from https://www.asos.com/search/?page=1&q=coat  
+# The exact images used from the dribble link above was not available. Therefore, images used in this app was gotten from https://www.asos.com/search/?page=1&q=coat  
